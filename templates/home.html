@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Personal Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+            <div class="col-lg-6 order-lg-1 order-2">
+                <div class="hero-content">
+                    <h1 class="display-4 fw-bold mb-3">
+                        Hello, I'm <span class="text-primary">Your Name</span>
+                    </h1>
+                    <h2 class="h3 text-secondary mb-4">Full Stack Developer & Software Engineer</h2>
+                    <p class="lead mb-4">
+                        I create beautiful, functional, and user-centered digital experiences. 
+                        Passionate about building scalable web applications and solving complex problems with clean, efficient code.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-folder-open me-2"></i>View My Work
+                        </a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1 text-center mb-4 mb-lg-0">
+                <div class="profile-image-container">
+                    <img src="{{ url_for('static', filename='assets/profile-placeholder.svg') }}" 
+                         alt="Profile Picture" 
+                         class="profile-image img-fluid rounded-circle shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="py-5 bg-body-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="h1 fw-bold">Skills & Technologies</h2>
+                <p class="lead text-secondary">Technologies I work with to bring ideas to life</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Frontend Development</h5>
+                        <p class="card-text">HTML5, CSS3, JavaScript, React, Bootstrap, Responsive Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-server fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Backend Development</h5>
+                        <p class="card-text">Python, Flask, FastAPI, Node.js, RESTful APIs, Database Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Tools & Platforms</h5>
+                        <p class="card-text">Git, Docker, PostgreSQL, MongoDB, AWS, Linux, CI/CD</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Projects Preview -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="h1 fw-bold">Featured Projects</h2>
+                <p class="lead text-secondary">A selection of my recent work</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">E-Commerce Platform</h5>
+                        <p class="card-text">Full-stack e-commerce solution with user authentication, product catalog, and payment integration.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-secondary me-1">Python</span>
+                            <span class="badge bg-secondary me-1">Flask</span>
+                            <span class="badge bg-secondary me-1">PostgreSQL</span>
+                        </div>
+                        <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">Data Visualization Dashboard</h5>
+                        <p class="card-text">Interactive dashboard for data analysis with real-time updates and responsive design.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-secondary me-1">JavaScript</span>
+                            <span class="badge bg-secondary me-1">D3.js</span>
+                            <span class="badge bg-secondary me-1">Chart.js</span>
+                        </div>
+                        <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('projects') }}" class="btn btn-primary">
+                <i class="fas fa-arrow-right me-2"></i>View All Projects
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Personal Portfolio{% endblock %}
+
+{% block content %}
+<div class="container py-5 mt-5">
+    <!-- Contact Header -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold mb-3">Get In Touch</h1>
+            <p class="lead text-secondary">I'd love to hear from you. Send me a message and I'll respond as soon as possible.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <h3 class="h4 mb-4">
+                        <i class="fas fa-paper-plane text-primary me-2"></i>Send Me a Message
+                    </h3>
+                    
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control form-control-lg" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <input type="text" class="form-control form-control-lg" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="6" required 
+                                      placeholder="Tell me about your project, idea, or just say hello..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-send me-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+            <!-- Direct Contact -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h4 class="h5 mb-4">
+                        <i class="fas fa-address-card text-primary me-2"></i>Contact Information
+                    </h4>
+                    
+                    <div class="contact-item mb-3">
+                        <h6 class="mb-1">
+                            <i class="fas fa-envelope text-primary me-2"></i>Email
+                        </h6>
+                        <a href="mailto:your.email@example.com" class="text-decoration-none">
+                            your.email@example.com
+                        </a>
+                    </div>
+                    
+                    <div class="contact-item mb-3">
+                        <h6 class="mb-1">
+                            <i class="fas fa-phone text-primary me-2"></i>Phone
+                        </h6>
+                        <a href="tel:+1234567890" class="text-decoration-none">
+                            +1 (234) 567-8900
+                        </a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h6 class="mb-1">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>Location
+                        </h6>
+                        <p class="mb-0">San Francisco, CA</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h4 class="h5 mb-4">
+                        <i class="fas fa-share-alt text-primary me-2"></i>Connect With Me
+                    </h4>
+                    
+                    <div class="d-grid gap-2">
+                        <a href="https://linkedin.com/in/username" target="_blank" 
+                           class="btn btn-outline-primary">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/username" target="_blank" 
+                           class="btn btn-outline-secondary">
+                            <i class="fab fa-github me-2"></i>GitHub Profile
+                        </a>
+                        <a href="https://twitter.com/username" target="_blank" 
+                           class="btn btn-outline-info">
+                            <i class="fab fa-twitter me-2"></i>Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="h5 mb-3">
+                        <i class="fas fa-clock text-primary me-2"></i>Availability
+                    </h4>
+                    <div class="availability-status">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="status-indicator bg-success rounded-circle me-2" 
+                                 style="width: 12px; height: 12px;"></div>
+                            <span class="fw-bold text-success">Available for new projects</span>
+                        </div>
+                        <p class="text-secondary mb-0 small">
+                            I typically respond to messages within 24 hours during business days.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <h3 class="h4 mb-4 text-center">
+                        <i class="fas fa-question-circle text-primary me-2"></i>Frequently Asked Questions
+                    </h3>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="faq-item mb-4">
+                                <h5 class="mb-2">What types of projects do you work on?</h5>
+                                <p class="text-secondary">I specialize in web applications, API development, and full-stack solutions using Python, JavaScript, and modern frameworks.</p>
+                            </div>
+                            
+                            <div class="faq-item mb-4">
+                                <h5 class="mb-2">What's your typical project timeline?</h5>
+                                <p class="text-secondary">Project timelines vary based on complexity, but most web applications take 2-8 weeks from concept to deployment.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="faq-item mb-4">
+                                <h5 class="mb-2">Do you work with remote teams?</h5>
+                                <p class="text-secondary">Absolutely! I'm experienced in remote collaboration and work with teams across different time zones.</p>
+                            </div>
+                            
+                            <div class="faq-item mb-4">
+                                <h5 class="mb-2">Can you help with existing projects?</h5>
+                                <p class="text-secondary">Yes, I can help with code reviews, bug fixes, feature additions, and optimization of existing applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Form validation and user experience enhancements
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const inputs = form.querySelectorAll('input, textarea');
+    
+    // Add real-time validation feedback
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.hasAttribute('required') && !this.value.trim()) {
+                this.classList.add('is-invalid');
+            } else {
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+            }
+        });
+        
+        input.addEventListener('input', function() {
+            if (this.classList.contains('is-invalid') && this.value.trim()) {
+                this.classList.remove('is-invalid');
+                this.classList.add('is-valid');
+            }
+        });
+    });
+    
+    // Form submission handling
+    form.addEventListener('submit', function(e) {
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            if (input.hasAttribute('required') && !input.value.trim()) {
+                input.classList.add('is-invalid');
+                isValid = false;
+            }
+        });
+        
+        if (!isValid) {
+            e.preventDefault();
+            alert('Please fill in all required fields.');
+        }
+    });
+});
+</script>
+{% endblock %}
