@@ -92,7 +92,14 @@ This is a Flask-based personal portfolio website designed to showcase a develope
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+- June 20, 2025: Initial portfolio website setup with Flask backend
+- June 20, 2025: Added animated gradient borders throughout the website for visual appeal
+- June 20, 2025: Created complete deployment package with README and setup instructions
+
 ## Changelog
 
-Changelog:
-- June 20, 2025. Initial setup
+- June 20, 2025: Complete personal portfolio website with animated borders, dark theme, and responsive design
+- Created downloadable package with full setup instructions
+- Implemented gradient and pulse border animations on hero section, skills cards, projects, and contact form

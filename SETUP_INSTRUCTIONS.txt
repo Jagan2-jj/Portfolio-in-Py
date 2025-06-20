@@ -1,0 +1,120 @@
+PERSONAL PORTFOLIO WEBSITE - SETUP INSTRUCTIONS
+================================================
+
+QUICK START GUIDE
+-----------------
+
+1. EXTRACT FILES
+   - Extract the portfolio-website.tar.gz file to your desired folder
+   - Open terminal/command prompt in the extracted folder
+
+2. INSTALL PYTHON (if not installed)
+   - Download Python 3.11+ from https://python.org
+   - Make sure to check "Add to PATH" during installation
+
+3. INSTALL DEPENDENCIES
+   Run this command in your terminal:
+   
+   pip install flask flask-sqlalchemy gunicorn psycopg2-binary email-validator
+
+4. RUN THE WEBSITE
+   For development (with auto-reload):
+   python main.py
+   
+   For production:
+   gunicorn --bind 0.0.0.0:5000 --reuse-port --reload main:app
+
+5. OPEN IN BROWSER
+   Go to: http://localhost:5000
+
+CUSTOMIZATION
+-------------
+
+To personalize your portfolio:
+
+1. REPLACE PLACEHOLDER CONTENT
+   - Edit templates/home.html - Change "Your Name" to your actual name
+   - Edit templates/about.html - Update bio, education, achievements
+   - Edit templates/contact.html - Update contact information
+   - Edit app.py - Modify the projects_data list with your real projects
+
+2. ADD YOUR PHOTO
+   - Replace static/assets/profile-placeholder.svg with your photo
+   - Update the image path in templates/home.html line 32
+
+3. UPDATE SOCIAL LINKS
+   - Edit templates/base.html footer section (lines 86-94)
+   - Edit templates/contact.html social links (lines 99-111)
+
+4. CUSTOMIZE COLORS
+   - Edit static/css/style.css to change colors and animations
+   - Modify CSS variables in the :root section
+
+PROJECT STRUCTURE
+------------------
+app.py              - Main Flask application with all routes
+main.py             - Entry point to run the application
+templates/          - HTML template files
+  ├── base.html     - Main layout with navigation
+  ├── home.html     - Homepage with hero section
+  ├── about.html    - About page with bio and skills
+  ├── projects.html - Projects showcase page
+  └── contact.html  - Contact form and information
+static/
+  ├── css/style.css - Custom styling and animations
+  └── assets/       - Images and other assets
+
+FEATURES INCLUDED
+-----------------
+✓ Responsive design (works on all devices)
+✓ Dark theme with Bootstrap
+✓ Animated gradient borders
+✓ Working contact form
+✓ Professional navigation
+✓ Skills showcase
+✓ Projects portfolio
+✓ Social media links
+✓ Modern animations and effects
+
+DEPLOYMENT OPTIONS
+------------------
+
+HEROKU:
+1. Install Heroku CLI
+2. Create Procfile with: web: gunicorn main:app
+3. Run: heroku create your-app-name
+4. Run: git push heroku main
+
+REPLIT:
+1. Upload files to Replit
+2. Click "Deploy" button
+3. Website will be live instantly
+
+OTHER PLATFORMS:
+- Works with any Python hosting service
+- Just run: gunicorn main:app
+- Set PORT environment variable if required
+
+TROUBLESHOOTING
+---------------
+
+COMMON ISSUES:
+
+1. "Module not found" error
+   Solution: Run pip install flask flask-sqlalchemy gunicorn psycopg2-binary email-validator
+
+2. Port already in use
+   Solution: Change port in main.py or kill process using port 5000
+
+3. Permission denied
+   Solution: Run terminal as administrator or use sudo (Mac/Linux)
+
+4. Website not loading
+   Solution: Check if app is running, verify http://localhost:5000
+
+SUPPORT
+-------
+Check the README.md file for detailed documentation.
+All code is well-commented for easy understanding.
+
+ENJOY YOUR NEW PORTFOLIO WEBSITE!
