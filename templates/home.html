@@ -11,7 +11,7 @@
                 <div class="hero-content animated-border-slow">
                     <div class="bg-body p-4 rounded">
                         <h1 class="display-4 fw-bold mb-3">
-                            Hello, I'm <span class="text-primary">Your Name</span>
+                            Hello, I'm <span class="text-primary">Jagan Panigrahi</span>
                         </h1>
                         <h2 class="h3 text-secondary mb-4">Full Stack Developer & Software Engineer</h2>
                         <p class="lead mb-4">
@@ -31,7 +31,7 @@
             </div>
             <div class="col-lg-6 order-lg-2 order-1 text-center mb-4 mb-lg-0">
                 <div class="profile-image-container">
-                    <img src="{{ url_for('static', filename='assets/profile-placeholder.svg') }}" 
+                    <img src="{{ url_for('static', filename='assets/jagan.png') }}" 
                          alt="Profile Picture" 
                          class="profile-image img-fluid rounded-circle shadow-lg">
                 </div>
@@ -55,7 +55,7 @@
                     <div class="card-body text-center p-4 bg-body">
                         <i class="fas fa-code fa-3x text-primary mb-3"></i>
                         <h5 class="card-title">Frontend Development</h5>
-                        <p class="card-text">HTML5, CSS3, JavaScript, React, Bootstrap, Responsive Design</p>
+                        <p class="card-text">HTML5, CSS3, JavaScript, React,Responsive Design</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     <div class="card-body text-center p-4 bg-body">
                         <i class="fas fa-server fa-3x text-primary mb-3"></i>
                         <h5 class="card-title">Backend Development</h5>
-                        <p class="card-text">Python, Flask, FastAPI, Node.js, RESTful APIs, Database Design</p>
+                        <p class="card-text">Python,FastAPI, Node.js, RESTful APIs, Database Design</p>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     <div class="card-body text-center p-4 bg-body">
                         <i class="fas fa-tools fa-3x text-primary mb-3"></i>
                         <h5 class="card-title">Tools & Platforms</h5>
-                        <p class="card-text">Git, Docker, PostgreSQL, MongoDB, AWS, Linux, CI/CD</p>
+                        <p class="card-text">Git, Docker, MongoDB,</p>
                     </div>
                 </div>
             </div>
@@ -91,35 +91,40 @@
             </div>
         </div>
         <div class="row g-4">
+            <!-- Game Hub -->
             <div class="col-md-6">
                 <div class="card border-0 shadow-sm h-100 animated-border-slow">
                     <div class="card-body p-4 bg-body">
-                        <h5 class="card-title">E-Commerce Platform</h5>
-                        <p class="card-text">Full-stack e-commerce solution with user authentication, product catalog, and payment integration.</p>
+                        <h5 class="card-title">Game Hub</h5>
+                        <p class="card-text">A responsive gaming portal including games like Tik-Tak-Toe and Stone, Paper, Scissors. Built to demonstrate modern web development techniques.</p>
                         <div class="mb-3">
-                            <span class="badge bg-secondary me-1">Python</span>
-                            <span class="badge bg-secondary me-1">Flask</span>
-                            <span class="badge bg-secondary me-1">PostgreSQL</span>
+                            <span class="badge bg-secondary me-1">HTML5</span>
+                            <span class="badge bg-secondary me-1">CSS3</span>
+                            <span class="badge bg-secondary me-1">JavaScript</span>
                         </div>
-                        <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">Learn More</a>
+                        <a href="https://github.com/yourusername/game-hub" target="_blank" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Epic Food Recipe AI App -->
             <div class="col-md-6">
                 <div class="card border-0 shadow-sm h-100 animated-border-slow">
                     <div class="card-body p-4 bg-body">
-                        <h5 class="card-title">Data Visualization Dashboard</h5>
-                        <p class="card-text">Interactive dashboard for data analysis with real-time updates and responsive design.</p>
+                        <h5 class="card-title">Epic Food Recipe AI WebApp</h5>
+                        <p class="card-text">A comprehensive recipe app with search, ingredient lists, and cooking instructions powered by AI. Built with a focus on clean UI and intuitive navigation.</p>
                         <div class="mb-3">
+                            <span class="badge bg-secondary me-1">HTML5</span>
                             <span class="badge bg-secondary me-1">JavaScript</span>
-                            <span class="badge bg-secondary me-1">D3.js</span>
-                            <span class="badge bg-secondary me-1">Chart.js</span>
+                            <span class="badge bg-secondary me-1">MongoDB</span>
+                            <span class="badge bg-secondary me-1">REST API</span>
                         </div>
-                        <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">Learn More</a>
+                        <a href="https://github.com/Jagan2-jj/EpicFoodRecipeAI-1" target="_blank" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="text-center mt-4">
             <a href="{{ url_for('projects') }}" class="btn btn-primary">
                 <i class="fas fa-arrow-right me-2"></i>View All Projects
@@ -127,4 +132,5 @@
         </div>
     </div>
 </section>
+
 {% endblock %}
