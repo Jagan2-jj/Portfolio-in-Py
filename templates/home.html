@@ -7,33 +7,33 @@
 <section class="hero-section">
     <div class="container">
         <div class="row align-items-center min-vh-100 py-5">
-            <div class="col-lg-6 order-lg-1 order-2">
-                <div class="hero-content animated-border-slow">
-                    <div class="bg-body p-4 rounded">
-                        <h1 class="display-4 fw-bold mb-3">
-                            Hello, I'm <span class="text-primary">Jagan Panigrahi</span>
+            <div class="col-lg-7 order-lg-1 order-2">
+                <div class="hero-content text-start">
+                    <div class="glass p-5 glass-hover">
+                        <h1 class="display-3 mb-3">
+                            Designing the <span class="text-gradient">Future</span>
                         </h1>
-                        <h2 class="h3 text-secondary mb-4">Full Stack Developer & Software Engineer</h2>
-                        <p class="lead mb-4">
-                            I create beautiful, functional, and user-centered digital experiences. 
-                            Passionate about building scalable web applications and solving complex problems with clean, efficient code.
+                        <h2 class="h2 mb-4">Hello, I'm Jagan Panigrahi</h2>
+                        <p class="lead mb-4 text-secondary">
+                            A <span class="text-white fw-bold">Backend-focused Software Engineer</span> specializing in
+                            building scalable and secure web applications with
+                            <span class="text-white fw-bold">Node.js, Spring Boot, and Flask</span>.
                         </p>
-                        <div class="hero-buttons">
-                            <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg me-3">
-                                <i class="fas fa-folder-open me-2"></i>View My Work
+                        <div class="hero-buttons d-flex gap-3">
+                            <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg">
+                                <i class="fas fa-rocket me-2"></i>Explore Projects
                             </a>
                             <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary btn-lg">
-                                <i class="fas fa-envelope me-2"></i>Get In Touch
+                                <i class="fas fa-paper-plane me-2"></i>Let's Talk
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 order-lg-2 order-1 text-center mb-4 mb-lg-0">
+            <div class="col-lg-5 order-lg-2 order-1 text-center mb-5 mb-lg-0">
                 <div class="profile-image-container">
-                    <img src="{{ url_for('static', filename='assets/jagan.png') }}" 
-                         alt="Profile Picture" 
-                         class="profile-image img-fluid rounded-circle shadow-lg">
+                    <img src="{{ url_for('static', filename='assets/anuphoto.png') }}" alt="Profile Picture"
+                        class="profile-image img-fluid shadow-lg">
                 </div>
             </div>
         </div>
@@ -41,94 +41,84 @@
 </section>
 
 <!-- Skills Section -->
-<section class="py-5 bg-body-secondary">
+<section class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="h1 fw-bold">Skills & Technologies</h2>
-                <p class="lead text-secondary">Technologies I work with to bring ideas to life</p>
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 fw-bold text-gradient">Core Capabilities</h2>
+                <p class="text-secondary">Premium tools for professional solutions</p>
             </div>
         </div>
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm pulse-border">
-                    <div class="card-body text-center p-4 bg-body">
-                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Frontend Development</h5>
-                        <p class="card-text">HTML5, CSS3, JavaScript, React,Responsive Design</p>
-                    </div>
+                <div class="card h-100 p-4 border-0 glass glass-hover text-center">
+                    <i class="fas fa-layer-group fa-3x text-primary mb-4"></i>
+                    <h3 class="h4">Frontend Artistry</h3>
+                    <p class="text-secondary">Building immersive interfaces with React, modern CSS, and
+                        performance-first architecture.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm animated-border">
-                    <div class="card-body text-center p-4 bg-body">
-                        <i class="fas fa-server fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Backend Development</h5>
-                        <p class="card-text">Python,FastAPI, Node.js, RESTful APIs, Database Design</p>
-                    </div>
+                <div class="card h-100 p-4 border-0 glass glass-hover text-center">
+                    <i class="fas fa-terminal fa-3x text-primary mb-4"></i>
+                    <h3 class="h4">Backend Engineering</h3>
+                    <p class="text-secondary">Scalable systems powered by Python (FastAPI/Flask) and robust Java
+                        architectures.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm pulse-border">
-                    <div class="card-body text-center p-4 bg-body">
-                        <i class="fas fa-tools fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Tools & Platforms</h5>
-                        <p class="card-text">Git, Docker, MongoDB,</p>
-                    </div>
+                <div class="card h-100 p-4 border-0 glass glass-hover text-center">
+                    <i class="fas fa-database fa-3x text-primary mb-4"></i>
+                    <h3 class="h4">System Design</h3>
+                    <p class="text-secondary">Intelligent database schemas and API integrations that connect data to
+                        users seamlessly.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Recent Projects Preview -->
+<!-- Projects Preview -->
 <section class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="h1 fw-bold">Featured Projects</h2>
-                <p class="lead text-secondary">A selection of my recent work</p>
+        <div class="glass p-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold mb-0">Featured Impact</h2>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="{{ url_for('projects') }}" class="btn btn-outline-light rounded-pill px-4">See All
+                        projects</a>
+                </div>
             </div>
-        </div>
-        <div class="row g-4">
-            <!-- Game Hub -->
-            <div class="col-md-6">
-                <div class="card border-0 shadow-sm h-100 animated-border-slow">
-                    <div class="card-body p-4 bg-body">
-                        <h5 class="card-title">Game Hub</h5>
-                        <p class="card-text">A responsive gaming portal including games like Tik-Tak-Toe and Stone, Paper, Scissors. Built to demonstrate modern web development techniques.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">HTML5</span>
-                            <span class="badge bg-secondary me-1">CSS3</span>
-                            <span class="badge bg-secondary me-1">JavaScript</span>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="glass glass-hover p-4 h-100">
+                        <div class="badge bg-primary mb-3">AI & MERN</div>
+                        <h4 class="mb-3">LinkLens AI</h4>
+                        <p class="text-secondary">Full-stack MERN application with LinkedIn OAuth for profile scoring
+                            and AI-driven career recommendations.</p>
+                        <div class="mt-4">
+                            <span class="text-ios-accent me-3"><i class="fab fa-react"></i></span>
+                            <span class="text-ios-accent me-3"><i class="fab fa-node-js"></i></span>
+                            <span class="text-ios-accent"><i class="fas fa-brain"></i></span>
                         </div>
-                        <a href="https://github.com/yourusername/game-hub" target="_blank" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="glass glass-hover p-4 h-100">
+                        <div class="badge bg-secondary mb-3">Mobile & Node.js</div>
+                        <h4 class="mb-3">IssueSense</h4>
+                        <p class="text-secondary">React Native app for hostel issue management with photo evidence,
+                            real-time alerts, and SOS emergency features.</p>
+                        <div class="mt-4">
+                            <span class="text-ios-accent me-3"><i class="fab fa-react"></i></span>
+                            <span class="text-ios-accent me-3"><i class="fab fa-node-js"></i></span>
+                            <span class="text-ios-accent"><i class="fas fa-mobile-alt"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Epic Food Recipe AI App -->
-            <div class="col-md-6">
-                <div class="card border-0 shadow-sm h-100 animated-border-slow">
-                    <div class="card-body p-4 bg-body">
-                        <h5 class="card-title">Epic Food Recipe AI WebApp</h5>
-                        <p class="card-text">A comprehensive recipe app with search, ingredient lists, and cooking instructions powered by AI. Built with a focus on clean UI and intuitive navigation.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">HTML5</span>
-                            <span class="badge bg-secondary me-1">JavaScript</span>
-                            <span class="badge bg-secondary me-1">MongoDB</span>
-                            <span class="badge bg-secondary me-1">REST API</span>
-                        </div>
-                        <a href="https://github.com/Jagan2-jj/EpicFoodRecipeAI-1" target="_blank" class="btn btn-outline-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-4">
-            <a href="{{ url_for('projects') }}" class="btn btn-primary">
-                <i class="fas fa-arrow-right me-2"></i>View All Projects
-            </a>
         </div>
     </div>
 </section>

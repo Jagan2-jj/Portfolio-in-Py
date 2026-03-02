@@ -6,194 +6,68 @@
 <div class="container py-5 mt-5">
     <!-- Projects Header -->
     <div class="row mb-5">
-        <div class="col-12 text-center">
-            <h1 class="display-4 fw-bold mb-3">My Development Projects</h1>
-            <p class="lead text-secondary">Showcasing my full-stack development journey through practical implementations</p>
+        <div class="col-12 text-center mt-5">
+            <h1 class="display-3 fw-bold mb-3 text-gradient">The Portfolio</h1>
+            <p class="lead text-secondary">A curated collection of digital solutions and engineering experiments</p>
         </div>
     </div>
 
     <!-- Projects Grid -->
     <div class="row g-4">
-        <!-- Project 1: Game Hub -->
+        {% for project in projects %}
         <div class="col-lg-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 project-card animated-border">
-                <div class="card-body p-4 bg-body">
-                    <h4 class="card-title mb-3">
-                        <i class="fas fa-gamepad text-primary me-2"></i>Game Hub
-                    </h4>
-                    <p class="card-text mb-3">A responsive gaming portal including games like Tik-Tak-Toe and Stone,Paper,Scissors. Built to demonstrate modern web development techniques.</p>
-                    
-                    <div class="mb-3">
-                        <h6 class="text-secondary mb-2">
-                            <i class="fas fa-tools me-1"></i>Tech Stack:
-                        </h6>
-                        <div class="tech-stack">
-                            <span class="badge bg-secondary me-1 mb-1">HTML5</span>
-                            <span class="badge bg-secondary me-1 mb-1">CSS3</span>
-                            <span class="badge bg-secondary me-1 mb-1">JavaScript</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/gamehub" class="btn btn-outline-primary me-2" target="_blank">
-                            <i class="fab fa-github me-1"></i>GitHub
-                        </a>
-                        <a href="#" class="btn btn-primary" target="_blank">
-                            <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                        </a>
+            <div class="glass p-4 h-100 glass-hover">
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                    <div class="glass p-3 rounded-circle">
+                        {% if 'AI' in project.title or 'AI' in project.tech_stack %}
+                        <i class="fas fa-brain fa-2x text-ios-accent"></i>
+                        {% elif 'Mobile' in project.title or 'React Native' in project.tech_stack %}
+                        <i class="fas fa-mobile-alt fa-2x text-ios-accent"></i>
+                        {% elif 'Web' in project.title or 'Flask' in project.tech_stack or 'React.js' in
+                        project.tech_stack %}
+                        <i class="fas fa-code fa-2x text-ios-accent"></i>
+                        {% else %}
+                        <i class="fas fa-rocket fa-2x text-ios-accent"></i>
+                        {% endif %}
                     </div>
                 </div>
-            </div>
-        </div>
+                <h4 class="fw-bold mb-3">{{ project.title }}</h4>
+                <p class="text-secondary mb-4">{{ project.description }}</p>
 
-        <!-- Project 2: Food Recipe App -->
-        <div class="col-lg-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 project-card pulse-border">
-                <div class="card-body p-4 bg-body">
-                    <h4 class="card-title mb-3">
-                        <i class="fas fa-utensils text-primary me-2"></i>Epic Food Recipe AI WebApp
-                    </h4>
-                    <p class="card-text mb-3">A comprehensive recipe application with search functionality, ingredient lists, and cooking instructions with AI. Focused on clean UI and intuitive navigation.</p>
-                    
-                    <div class="mb-3">
-                        <h6 class="text-secondary mb-2">
-                            <i class="fas fa-tools me-1"></i>Tech Stack:
-                        </h6>
-                        <div class="tech-stack">
-                            <span class="badge bg-secondary me-1 mb-1">HTML5</span>
-                            <span class="badge bg-secondary me-1 mb-1">JavaScript</span>
-                            <span class="badge bg-secondary me-1 mb-1">MongoDB</span>
-                            <span class="badge bg-secondary me-1 mb-1">REST API</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/Jagan2-jj/EpicFoodRecipeAI-1" class="btn btn-outline-primary me-2" target="_blank">
-                            <i class="fab fa-github me-1"></i>GitHub
-                        </a>
-                        <a href="https://epicfoodrecipeai-1-1.onrender.com" class="btn btn-primary" target="_blank">
-                            <i class="fas fa-external-link-alt me-1"></i>Live Demo
-                        </a>
+                <div class="mb-4">
+                    <h6 class="text-secondary small fw-bold text-uppercase mb-3">Development stack</h6>
+                    <div class="d-flex gap-2 flex-wrap">
+                        {% for tech in project.tech_stack %}
+                        <span class="glass px-3 py-1 small rounded-pill">{{ tech }}</span>
+                        {% endfor %}
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Project 3: Portfolio Website -->
-        <div class="col-lg-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 project-card animated-border">
-                <div class="card-body p-4 bg-body">
-                    <h4 class="card-title mb-3">
-                        <i class="fas fa-laptop-code text-primary me-2"></i>Portfolio Website
-                    </h4>
-                    <p class="card-text mb-3">This responsive portfolio website built with Flask and Bootstrap to showcase my projects and skills.</p>
-                    
-                    <div class="mb-3">
-                        <h6 class="text-secondary mb-2">
-                            <i class="fas fa-tools me-1"></i>Tech Stack:
-                        </h6>
-                        <div class="tech-stack">
-                            <span class="badge bg-secondary me-1 mb-1">Python</span>
-                            <span class="badge bg-secondary me-1 mb-1">Flask</span>
-                            <span class="badge bg-secondary me-1 mb-1">Bootstrap</span>
-                            <span class="badge bg-secondary me-1 mb-1">JavaScript</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/portfolio" class="btn btn-outline-primary me-2" target="_blank">
-                            <i class="fab fa-github me-1"></i>GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Additional Projects Section -->
-    <div class="row mt-5">
-        <div class="col-12">
-            <div class="card border-0 shadow-sm">
-                <div class="card-body p-5 text-center">
-                    <h3 class="h4 mb-3">
-                        <i class="fab fa-github text-primary me-2"></i>More Projects on GitHub
-                    </h3>
-                    <p class="text-secondary mb-4">
-                        Explore my other coding experiments, small utilities, and ongoing projects on my GitHub profile.
-                    </p>
-                    <a href="https://github.com/yourusername" class="btn btn-outline-primary btn-lg" target="_blank">
-                        <i class="fab fa-github me-2"></i>View All Projects
+                <div class="d-flex gap-3">
+                    <a href="{{ project.github_link }}" class="btn btn-primary rounded-pill px-4" target="_blank">
+                        <i class="fab fa-github me-2"></i>Code
                     </a>
+                    {% if project.demo_link and project.demo_link != '#' %}
+                    <a href="{{ project.demo_link }}" class="btn btn-outline-light rounded-pill px-4" target="_blank">
+                        <i class="fas fa-external-link-alt me-2"></i>Live
+                    </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 
-    <!-- Skills Showcase -->
-   <div class="row mt-5">
-    <div class="col-12">
-        <h2 class="h3 text-center mb-4">My Core Technical Skills</h2>
-        <div class="row g-3">
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 bg-body-secondary text-center p-3 h-100">
-                    <i class="fab fa-java fa-2x text-primary mb-2"></i>
-                    <h6>Java</h6>
-                    <small class="text-muted">Core & Advanced</small>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 bg-body-secondary text-center p-3 h-100">
-                    <i class="fab fa-python fa-2x text-info mb-2"></i>
-                    <h6>Python</h6>
-                    <small class="text-muted">Flask, Django</small>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 bg-body-secondary text-center p-3 h-100">
-                    <i class="fab fa-js-square fa-2x text-warning mb-2"></i>
-                    <h6>JavaScript</h6>
-                    <small class="text-muted">ES6+, React</small>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 bg-body-secondary text-center p-3 h-100">
-                    <i class="fas fa-database fa-2x text-success mb-2"></i>
-                    <h6>Databases</h6>
-                    <small class="text-muted">SQL, MongoDB</small>
-                </div>
-            </div>
-            <!-- New HTML Skill Card -->
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 bg-body-secondary text-center p-3 h-100">
-                    <i class="fab fa-html5 fa-2x text-danger mb-2"></i>
-                    <h6>HTML5</h6>
-                    <small class="text-muted">Semantic Markup, Accessibility</small>
-                </div>
-            </div>
-
-        <div class="col-md-3 col-sm-6">
-    <div class="card border-0 bg-body-secondary text-center p-3 h-100">
-        <i class="fab fa-css3-alt fa-2x text-primary mb-2"></i>
-        <h6>CSS3</h6>
-        <small class="text-muted">Flexbox, Grid, Animations</small>
-    </div>
-</div>
-        </div>
-    </div>
-</div>
-    <!-- Call to Action -->
+    <!-- More on GitHub -->
     <div class="row mt-5">
         <div class="col-12 text-center">
-            <div class="card border-0 shadow-sm">
-                <div class="card-body p-5">
-                    <h3 class="h4 mb-3">Let's Build Something Together</h3>
-                    <p class="text-secondary mb-4">
-                        I'm actively looking for new challenges and collaboration opportunities. Whether you have a project idea or need development help, I'd love to hear from you.
-                    </p>
-                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">
-                        <i class="fas fa-paper-plane me-2"></i>Contact Me
-                    </a>
-                </div>
+            <div class="glass p-5">
+                <h3 class="fw-bold mb-4">Looking for more?</h3>
+                <p class="text-secondary mb-4">My GitHub is a playground for experimental logic and utility scripts.</p>
+                <a href="https://github.com/Jagan2-jj" class="btn btn-outline-light btn-lg rounded-pill px-5"
+                    target="_blank">
+                    <i class="fab fa-github me-2"></i>Explore Full History
+                </a>
             </div>
         </div>
     </div>
@@ -202,22 +76,22 @@
 
 {% block scripts %}
 <script>
-// Enhanced card hover effects
-document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-            this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-            this.style.transition = 'all 0.3s ease';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '';
+    // Enhanced card hover effects
+    document.addEventListener('DOMContentLoaded', function () {
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                this.style.transition = 'all 0.3s ease';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '';
+            });
         });
     });
-});
 </script>
 {% endblock %}
